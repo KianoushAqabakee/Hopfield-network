@@ -21,17 +21,16 @@ def image_to_np(path):
     im_np = np.where(im_np<128, -1, 1)
     im_np = im_np.reshape(N)
     return im_np
-PATH="data/"
-epsilon = np.asarray([image_to_np(os.path.join(PATH, '0.jpg')),
-                     image_to_np(os.path.join(PATH, '1.jpg')),
-                     image_to_np(os.path.join(PATH, '2.jpg')),
-                     image_to_np(os.path.join(PATH, '3.jpg')),
-                     image_to_np(os.path.join(PATH, '4.jpg')),
-                     image_to_np(os.path.join(PATH, '5.jpg')),
-                     image_to_np(os.path.join(PATH, '6.jpg')),
-                     image_to_np(os.path.join(PATH, '7.jpg')),
-                     image_to_np(os.path.join(PATH, '8.jpg')),
-                     image_to_np(os.path.join(PATH, '9.jpg'))])                   
+epsilon = np.asarray([image_to_np(os.path.join( '0.jpg')),
+                     image_to_np(os.path.join( '1.jpg')),
+                     image_to_np(os.path.join( '2.jpg')),
+                     image_to_np(os.path.join( '3.jpg')),
+                     image_to_np(os.path.join( '4.jpg')),
+                     image_to_np(os.path.join( '5.jpg')),
+                     image_to_np(os.path.join( '6.jpg')),
+                     image_to_np(os.path.join( '7.jpg')),
+                     image_to_np(os.path.join( '8.jpg')),
+                     image_to_np(os.path.join( '9.jpg'))])                   
 epsilon[0].reshape(N_sqrt, N_sqrt)
 fig = plt.figure(figsize = (8, 8))
 fig.subplots_adjust(hspace=0.1, wspace=0.1)
